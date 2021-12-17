@@ -4,3 +4,9 @@ node_modules
 .gitignore
 .env
 tsconfig.json
+.eslintrc
+.prettierignore
+.prettierrc
+.lintstagedrc.json
+.husky
+jest.config.js
