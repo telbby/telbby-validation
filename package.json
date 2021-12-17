@@ -4,7 +4,13 @@
   "description": "validation module for telbby",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc",
+    "test": "jest",
+    "lint": "eslint ./src --ext .ts",
+    "lint:fix": "eslint ./src --ext .ts --fix",
+    "precommit": "yarn lint-staged",
+    "prettier:write": "yarn prettier --write .",
+    "prepare": "husky install"
   },
   "repository": "https://github.com/telbby/validation.git",
   "author": "telbby",
@@ -12,5 +18,22 @@
   "homepage": "https://github.com/telbby/validation#readme",
   "bugs": {
     "url": "https://github.com/telbby/validation/issues"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.3",
+    "@typescript-eslint/eslint-plugin": "^5.0.0",
+    "@typescript-eslint/parser": "^5.0.0",
+    "eslint": "8.2.0",
+    "eslint-config-airbnb-base": "15.0.0",
+    "eslint-config-airbnb-typescript": "^16.1.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-prettier": "^4.0.0",
+    "husky": "^7.0.0",
+    "jest": "^27.4.5",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.1",
+    "ts-jest": "^27.1.2",
+    "typescript": "^4.5.4"
   }
 }
