@@ -10,3 +10,4 @@ tsconfig.json
 .lintstagedrc.json
 .husky
 jest.config.js
+.github
