@@ -1,4 +1,10 @@
-import { USER_PW_MAX_LENGTH, USER_PW_MIN_LENGTH } from './constants';
+import {
+  USER_PW_MAX_LENGTH,
+  USER_PW_MIN_LENGTH,
+  WARNING_PW_COMBINATION,
+  WARNING_PW_EMPTY,
+  WARNING_PW_LENGTH,
+} from './constants';
 import {
   isHasLowerEng,
   isHasNumber,
@@ -18,5 +24,14 @@ export const isPwCombinationValid = (pw: string): boolean => {
 export const isPwLengthValid = (pw: string): boolean =>
   pw.length >= USER_PW_MIN_LENGTH && pw.length <= USER_PW_MAX_LENGTH;
 
-export const isPwValid = (pw: string): boolean =>
-  isPwLengthValid(pw) && isPwCombinationValid(pw);
+export const pwValidator = (pw: string): readonly [boolean, string] => {
+  if (!pw.length) return [false, WARNING_PW_EMPTY];
+
+  if (!isPwLengthValid(pw)) return [false, WARNING_PW_LENGTH];
+
+  if (!isPwCombinationValid(pw)) return [false, WARNING_PW_COMBINATION];
+
+  return [true, ''];
+};
+
+export const isPwValid = (pw: string): boolean => pwValidator(pw)[0];
