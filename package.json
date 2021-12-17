@@ -10,7 +10,8 @@
     "lint:fix": "eslint ./src --ext .ts --fix",
     "precommit": "yarn lint-staged",
     "prettier:write": "yarn prettier --write .",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "publish": "npm run build && npm publish"
   },
   "repository": "https://github.com/telbby/validation.git",
   "author": "telbby",
