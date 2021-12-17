@@ -46,6 +46,10 @@ This is **Validation Module** of **Telbby**, a service that can be introduced in
   - Returns true if the length of the given pw is valid
 - `isPwValid(pw: string): boolean`
   - Returns true if the given pw is valid
+- `idValidator(id: string): readonly [boolean, string]`
+  - If the id is invalid, it returns false and a warning string. Returns an empty string if the id is valid.
+- `pwValidator(pw: string): readonly [boolean, string]`
+  - If the pw is invalid, it returns false and a warning string. Returns an empty string if the pw is valid.
 
 ### Constants for ID & PW
 
@@ -57,6 +61,16 @@ This is **Validation Module** of **Telbby**, a service that can be introduced in
   - Minimum length of user PW
 - `USER_PW_MAX_LENGTH`
   - Maximum length of user PW
+- Warning Messages
+  - `WARNING_ID_EMPTY`
+  - `WARNING_ID_ALL`
+  - `WARNING_ID_LENGTH`
+  - `WARNING_ID_START`
+  - `WARNING_ID_LETTERS`
+  - `WARNING_PW_EMPTY`
+  - `WARNING_PW_ALL`
+  - `WARNING_PW_LENGTH`
+  - `WARNING_PW_COMBINATION`
 
 ## License
 
