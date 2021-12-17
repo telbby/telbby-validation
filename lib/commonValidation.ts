@@ -1,14 +1,14 @@
-export const REG_START_ENG = /^[a-zA-Z]/;
+const REG_START_ENG = /^[a-zA-Z]/;
 
-export const REG_ONLY_USE_ENG_AND_NUM = /^[a-zA-Z0-9]{0,}$/;
+const REG_ONLY_USE_ENG_AND_NUM = /^[a-zA-Z0-9]{0,}$/;
 
-export const REG_UPPER_ENG = /[A-Z]/;
+const REG_UPPER_ENG = /[A-Z]/;
 
-export const REG_LOWER_ENG = /[a-z]/;
+const REG_LOWER_ENG = /[a-z]/;
 
-export const REG_SPECIAL_CHAR = /[<>{}|;:.,~!?@#$%^=&*"\\/]/;
+const REG_SPECIAL_CHAR = /[<>{}|;:.,~!?@#$%^=&*"\\/]/;
 
-export const REG_NUM = /[0-9]/;
+const REG_NUM = /[0-9]/;
 
 export const isStartWithEng = (s: string): boolean => REG_START_ENG.test(s);
 
