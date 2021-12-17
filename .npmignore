@@ -11,3 +11,4 @@ tsconfig.json
 .husky
 jest.config.js
 .github
+**/*.test.js
