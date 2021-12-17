@@ -2,7 +2,8 @@
   "name": "@telbby/validation",
   "version": "1.0.0",
   "description": "validation module for telbby",
-  "main": "index.js",
+  "main": "dist/index.js",
+  "types" : "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest",
