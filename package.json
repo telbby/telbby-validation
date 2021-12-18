@@ -4,7 +4,6 @@
   "description": "validation module for telbby",
   "main": "dist/index.js",
   "types" : "dist/index.d.ts",
-  "type": "module",
   "scripts": {
     "build": "tsc -p ./tsconfig-build.json",
     "test": "jest",
@@ -12,8 +11,7 @@
     "lint:fix": "eslint . --ext .ts --fix",
     "precommit": "yarn lint-staged",
     "prettier:write": "yarn prettier --write .",
-    "prepare": "husky install",
-    "publish": "npm run build && npm publish --access public"
+    "prepare": "husky install"
   },
   "repository": "https://github.com/telbby/validation.git",
   "author": "telbby",
